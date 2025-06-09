@@ -1,3 +1,14 @@
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.pageYOffset;
+  const background = document.querySelector('.parallax-background');
+
+  // Регулируйте коэффициент для желаемого эффекта
+  const rate = 0.5;
+  background.style.transform = `translateY(${scrollPosition * rate}px)`;
+});
+
+
 const menuData = {
   breakfasts: [
     { name: "Сырники со сметаной и сезонными ягодами", weight: "", price: 490 },
@@ -235,7 +246,7 @@ const menuData = {
     { price: 1750, weight: "310 г", name: "Говяжьи щечки с пюре из батата" },
     {
       price: 2100,
-      weight: "50 г",
+      weight: "100 г",
       name: "Фаланги камчатского краба с соусом на выбор",
       note: "из черного перца/чесночный",
     },
@@ -275,6 +286,7 @@ const menuData = {
     { price: 490, weight: "100 г", name: "Сибас" },
     { price: 470, weight: "100 г", name: "Дорада" },
     { price: 390, weight: "100 г", name: "Форель" },
+    
   ],
   menuChildrens: [
     { price: 470, weight: null, name: "Куриные наггетсы с сырным соусом" },

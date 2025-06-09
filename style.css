@@ -10,7 +10,7 @@ body {
 }
 
 /* Для заголовков и других элементов при необходимости */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
   color: #001f3f; /* Темно-синий цвет для заголовков */
   text-align: center; /* Центрирование заголовков */
 }
@@ -20,7 +20,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #001f3f; /* Все элементы — темно-синий (можно оставить только для body) */
 }
 
+h4{
+  color: #001f3f; /* Темно-синий цвет для заголовков */
+  text-align: center; /* Центрирование заголовков */
+   font-style: italic;
 
+  }
 
 .header {
   /* Путь к вашему логотипу */
@@ -146,4 +151,38 @@ h1, h2 {
   .dish-details {
     margin-top: 8px;
   }
+
+}
+/* Общие стили для секции */
+.parallax-section {
+  position: relative;
+  height: 100vh; /* высота на весь экран */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Фон с эффектом параллакса */
+.parallax-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%; /* чуть больше, чтобы было что двигать */
+  background-image: url(/home.jpg);
+  background-size: cover;
+  background-position: center;
+  will-change: transform; /* для оптимизации */
+}
+
+/* Контент поверх фона */
+.content {
+  position: relative;
+  color: white;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  max-width: 600px;
 }
