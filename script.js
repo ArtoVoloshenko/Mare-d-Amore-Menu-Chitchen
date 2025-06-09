@@ -12,6 +12,7 @@ const menuData = {
       name: "Наполнители 50 г: сгущенное молоко/банан, яблоко/варенье домашнее/кленовый сироп",
       weight: "",
       price: 50,
+      
     },
     { name: "Каша пшенная с томленой грушей", weight: "", price: 480 },
     { name: "Яичница/омлет", weight: "", price: 300 },
@@ -111,7 +112,7 @@ const menuData = {
   seafoodAndOysters: [
     { name: "Устрица Муроцу", weight: "100 г", price: 900 },
     { name: "Устрица российская", weight: "1 шт", price: 580 },
-    { name: "Морской ёж", weight: "1 шт", price: 550 },
+    { name: "Морской ёж", weight: "1 шт", price: 580 },
     { name: "Спизула", weight: "1 шт", price: 880 },
     { name: "Камчатский краб", weight: "100 г", price: 950 },
     { name: "Лобстер", weight: "100 г", price: 2100 },
@@ -126,7 +127,7 @@ const menuData = {
       price: "880",
     },
     { name: "Устрицы заморские", weight: "1 шт", price: "750" }, // уточняйте у официанта
-    { name: "Устрицы российские", weight: "1шт", price: "500" }, // уточняйте у официанта
+    { name: "Устрицы российские", weight: "1шт", price: "580" }, // уточняйте у официанта
   ],
   shrimpAndOysters: [
     { name: "Магаданские креветки на льду", weight: "от 300 г", price: 600 },
@@ -233,17 +234,23 @@ const menuData = {
     },
     { price: 1750, weight: "310 г", name: "Говяжьи щечки с пюре из батата" },
     {
-      price: 100,
+      price: 2100,
       weight: "50 г",
       name: "Фаланги камчатского краба с соусом на выбор",
       note: "из черного перца/чесночный",
+    },
+       {
+      price: 100,
+      weight: "50 г",
+      name: "из черного перца/чесночный",
+      note: "",
     },
     { price: 2100, weight: "100 г", name: "Ассорти морепродуктов" },
     { price: 2850, weight: "1000 г", name: "Мидии в соусе Дор-блю" },
     { price: 2850, weight: "1000 г", name: "Мидии в соусе Бер блан" },
     { price: 2850, weight: "1000 г", name: "Мидии в соусе Том-Ям" },
   
-    { price: 2900, weight: "700 г", name: "Черноморский сет - Ставрида, барабуля, сарган" },
+    { price: 2900, weight: "700 г", name: "Черноморский сет - cтаврида, барабуля, сарган" },
     { price: 690, weight: "100 г", name: "Барабуля жареная - заказ от 300 грамм" },
     {
       price: 1400,
@@ -417,7 +424,7 @@ menuDesert : [
 
 };
 
-// Функция для отображения раздела меню
+// Обновленная функция для отображения раздела меню с описанием
 function renderMenu(sectionId, items) {
   const container = document.getElementById(sectionId);
   container.innerHTML = ""; // Очистка перед рендерингом
@@ -425,10 +432,22 @@ function renderMenu(sectionId, items) {
     const dishDiv = document.createElement("div");
     dishDiv.className = "dish";
 
+    // Название блюда
     const nameDiv = document.createElement("div");
     nameDiv.className = "dish-name";
     nameDiv.textContent = item.name;
 
+    // Если есть описание, добавляем его под названием
+    if (item.description) {
+      const descriptionDiv = document.createElement("div");
+      descriptionDiv.className = "dish-description";
+      descriptionDiv.textContent = item.description;
+      descriptionDiv.style.fontStyle = "italic";
+      descriptionDiv.style.fontSize = "0.9em"; // чуть меньше, чем основной текст
+      nameDiv.appendChild(descriptionDiv); // добавляем описание внутрь названия
+    }
+
+    // Детали: вес и цена
     const detailsDiv = document.createElement("div");
     detailsDiv.className = "dish-details";
 

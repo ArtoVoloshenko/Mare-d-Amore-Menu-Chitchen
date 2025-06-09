@@ -70,6 +70,12 @@ h2.section-title {
   margin: 0 auto 60px;
   padding: 0 20px;
 }
+.dish-description {
+  font-style: italic;     /* курсив */
+  font-size: 0.9em;       /* чуть меньше размера основного текста */
+  color: #555;            /* чуть более мягкий цвет, по желанию */
+  margin-top: 4px;        /* небольшой отступ сверху для отделения от названия */
+}
 
 /* Карточки блюд */
 .dish {
@@ -115,14 +121,28 @@ h1, h2 {
   font-weight: bold;
   font-family: 'Arno Pro', serif;
 }
-
+@media (max-width: 428px) {
+  .responsive-heading {
+    display: block;
+    /* Обеспечиваем перенос слов целиком */
+    word-break: break-word; /* позволяет переносить по словам, но не разрывать слова */
+    /* Или можно использовать более строгий режим */
+    word-wrap: break-word; /* устаревший, но поддерживается */
+    /* Для предотвращения разрывов слов */
+    overflow-wrap: break-word; /* современный */
+    /* Можно дополнительно настроить стиль шрифта, цвет и т.д. */
+    font-size: 2em;
+    text-align: center;
+  }
+}
 /* Мобильная адаптация */
-@media(max-width: 428px) {
+@media(max-width: 420px) {
   .dish {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
   }
+
   .dish-details {
     margin-top: 8px;
   }
