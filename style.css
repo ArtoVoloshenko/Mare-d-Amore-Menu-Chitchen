@@ -1,0 +1,129 @@
+/* Подключение шрифта - добавьте в HTML */
+@import url('https://fonts.googleapis.com/css2?family=Arno+Pro&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arno Pro', serif; /* Шрифт Arno Pro для всего текста */
+  color: #001f3f; /* Темно-синий цвет текста */
+  background-color: #fff; /* Фон страницы (можете оставить белым или изменить) */
+}
+
+/* Для заголовков и других элементов при необходимости */
+h1, h2, h3, h4, h5, h6 {
+  color: #001f3f; /* Темно-синий цвет для заголовков */
+  text-align: center; /* Центрирование заголовков */
+}
+
+/* Если нужно, чтобы любой текст внутри элементов тоже был темно-синий */
+* {
+  color: #001f3f; /* Все элементы — темно-синий (можно оставить только для body) */
+}
+
+
+
+.header {
+  /* Путь к вашему логотипу */
+  background-image: url('./лого\ маре.png');
+
+  /* Расположение логотипа в нужной части */
+  background-position: top right; /* или любое другое положение */
+
+  /* Не повторять изображение */
+  background-repeat: no-repeat;
+
+  /* Размер логотипа, адаптивный */
+  background-size: contain; /* или 'auto', или конкретные размеры */
+
+  /* Фиксировать фон при прокрутке */
+  background-attachment: fixed;
+
+  /* Установка размеров элемента */
+  width: 100%; /* ширина по всей ширине контейнера или страницы */
+  height: 150px; /* высота, подбирайте по размеру логотипа */
+
+  /* Обеспечить, чтобы фон был зафиксирован за границами элемента, если нужно */
+  /* Можно добавить дополнительно: */
+  /* background-position: right top; */
+}
+
+/* Для мобильных и адаптивных настроек можно использовать медиа-запросы */
+@media (max-width: 428px) {
+  .header {
+    height: 100px; /* уменьшенная высота для мобильных устройств */
+  }
+}
+
+/* Заголовки разделов */
+h2.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 40px 0 20px;
+  letter-spacing: 2px;
+  font-family: 'Arno Pro', serif;
+}
+
+/* Контейнеры разделов меню */
+.menu-section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+/* Карточки блюд */
+.dish {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.dish:hover {
+  background-color: #f9f9f9;
+}
+
+/* Название блюда */
+.dish-name {
+  font-weight: normal;
+  max-width: 60%;
+  font-family: 'Arno Pro', serif;
+}
+h1, h2 {
+  text-align: center;
+}
+/* Детали блюда: вес и цена */
+.dish-details {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 14px;
+  white-space: nowrap;
+  font-family: 'Arno Pro', serif;
+}
+
+/* Вес блюда */
+.dish-weight {
+  color: #555;
+  font-style: italic;
+}
+
+/* Цена блюда */
+.dish-price {
+  font-weight: bold;
+  font-family: 'Arno Pro', serif;
+}
+
+/* Мобильная адаптация */
+@media(max-width: 428px) {
+  .dish {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .dish-details {
+    margin-top: 8px;
+  }
+}
