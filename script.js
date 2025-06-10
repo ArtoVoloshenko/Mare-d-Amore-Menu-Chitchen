@@ -1,13 +1,11 @@
-
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   const scrollPosition = window.pageYOffset;
-  const background = document.querySelector('.parallax-background');
+  const background = document.querySelector(".parallax-background");
 
   // Регулируйте коэффициент для желаемого эффекта
   const rate = 0.5;
   background.style.transform = `translateY(${scrollPosition * rate}px)`;
 });
-
 
 const menuData = {
   breakfasts: [
@@ -23,7 +21,6 @@ const menuData = {
       name: "Наполнители 50 г: сгущенное молоко/банан, яблоко/варенье домашнее/кленовый сироп",
       weight: "",
       price: 50,
-      
     },
     { name: "Каша пшенная с томленой грушей", weight: "", price: 480 },
     { name: "Яичница/омлет", weight: "", price: 300 },
@@ -123,6 +120,7 @@ const menuData = {
   seafoodAndOysters: [
     { name: "Устрица Муроцу", weight: "100 г", price: 900 },
     { name: "Устрица российская", weight: "1 шт", price: 580 },
+    { name: "Устрицы заморские", weight: "1 шт", price: "750" }, // уточняйте у
     { name: "Морской ёж", weight: "1 шт", price: 580 },
     { name: "Спизула", weight: "1 шт", price: 880 },
     { name: "Камчатский краб", weight: "100 г", price: 950 },
@@ -137,11 +135,15 @@ const menuData = {
       weight: "1 шт",
       price: "880",
     },
-    { name: "Устрицы заморские", weight: "1 шт", price: "750" }, // уточняйте у официанта
-    { name: "Устрицы российские", weight: "1шт", price: "580" }, // уточняйте у официанта
+    официанта,
   ],
   shrimpAndOysters: [
-    { name: "Магаданские креветки на льду", weight: "100 г", description: "заказ от 300 г", price: 600 },
+    {
+      name: "Магаданские креветки на льду",
+      weight: "100 г",
+      description: "заказ от 300 г",
+      price: 600,
+    },
     {
       name: "Креветки тигровые в пряном соусе, подаются на сковороде",
       weight: "170 г",
@@ -250,7 +252,7 @@ const menuData = {
       name: "Фаланги камчатского краба с соусом на выбор",
       note: "из черного перца/чесночный",
     },
-       {
+    {
       price: 100,
       weight: "50 г",
       name: "из черного перца/чесночный",
@@ -260,9 +262,19 @@ const menuData = {
     { price: 2850, weight: "1000 г", name: "Мидии в соусе Дор-блю" },
     { price: 2850, weight: "1000 г", name: "Мидии в соусе Бер блан" },
     { price: 2850, weight: "1000 г", name: "Мидии в соусе Том-Ям" },
-  
-    { price: 2900, weight: "700 г", name: "Черноморский сет ",  description: "cтаврида, барабуля, сарган"},
-    { price: 690, weight: "100 г", name: "Барабуля жареная", description:"заказ от 300 грамм" },
+
+    {
+      price: 2900,
+      weight: "700 г",
+      name: "Черноморский сет ",
+      description: "cтаврида, барабуля, сарган",
+    },
+    {
+      price: 690,
+      weight: "100 г",
+      name: "Барабуля жареная",
+      description: "заказ от 300 грамм",
+    },
     {
       price: 1400,
       weight: 270,
@@ -286,7 +298,6 @@ const menuData = {
     { price: 490, weight: "100 г", name: "Сибас" },
     { price: 470, weight: "100 г", name: "Дорада" },
     { price: 390, weight: "100 г", name: "Форель" },
-    
   ],
   menuChildrens: [
     { price: 470, weight: null, name: "Куриные наггетсы с сырным соусом" },
@@ -328,112 +339,110 @@ const menuData = {
       description: "",
     },
   ],
-   menuBreads : [
-  {
-    name: 'Хлебная корзина (ассорти)',
-    price: 290,
-    weight: '170 г',
-    description: ''
-  }
-],
- menuSouse : [
-  {
-    name: 'Дор-блю',
-    weight: '190 г',
-    price: 190,
-    description: ''
-  },
-  {
-    name: 'Кетчуп домашний',
-    weight: '50 г',
-    price: 100,
-    description: ''
-  },
-  {
-    name: 'Розе (сливочный)',
-    weight: '50 г',
-    price: 190,
-    description: ''
-  },
-  {
-    name: 'Барбекю',
-    weight: '190 г',
-    price: 150 ,
-    description: ''
-  },
-  {
-    name: 'Сливочно-перечный',
-    weight: '190 г',
-    price: 190,
-    description: ''
-  },
-  {
-    name: 'Демигляc',
-    weight: '190 г',
-    price: 100,
-    description: ''
-  }
-],
-menuDesert : [
-  {
-    name: 'Шоколадный брауни',
-    weight: '',
-    price: 650
-  },
-  {
-    name: 'Баноффи с грушей',
-    weight: '',
-    price: 650
-  },
-  {
-    name: 'Панна котта экзотик чиа',
-    weight: '',
-    price: 550
-  },
-  {
-    name: 'Синьор Помидор',
-    weight: '',
-    price: 550
-  },
-  {
-    name: 'Чизкейк',
-    weight: '',
-    price: 480
-  },
-  {
-    name: 'Медовик шоколадный',
-    weight: '',
-    price: 470
-  },
-  {
-    name: 'Павлова',
-    weight: '',
-    price: 400
-  },
-
-  {
-    name: 'Наполеон',
-    weight: '',
-    price: 450
-  },
+  menuBreads: [
     {
-    name: 'Сезонные фрукты и ягоды',
-    weight: '100 г',
-    price: 350
-  },
-  {
-    name: 'Сорбет на Ваш выбор',
-    weight: '50 г',
-    price: 250
-  },
-  {
-    name: 'Мороженое на Ваш выбор',
-    weight: '50',
-    price: 250
-  }
-],
+      name: "Хлебная корзина (ассорти)",
+      price: 290,
+      weight: "170 г",
+      description: "",
+    },
+  ],
+  menuSouse: [
+    {
+      name: "Дор-блю",
+      weight: "190 г",
+      price: 190,
+      description: "",
+    },
+    {
+      name: "Кетчуп домашний",
+      weight: "50 г",
+      price: 100,
+      description: "",
+    },
+    {
+      name: "Розе (сливочный)",
+      weight: "50 г",
+      price: 190,
+      description: "",
+    },
+    {
+      name: "Барбекю",
+      weight: "190 г",
+      price: 150,
+      description: "",
+    },
+    {
+      name: "Сливочно-перечный",
+      weight: "190 г",
+      price: 190,
+      description: "",
+    },
+    {
+      name: "Демигляc",
+      weight: "190 г",
+      price: 100,
+      description: "",
+    },
+  ],
+  menuDesert: [
+    {
+      name: "Шоколадный брауни",
+      weight: "",
+      price: 650,
+    },
+    {
+      name: "Баноффи с грушей",
+      weight: "",
+      price: 650,
+    },
+    {
+      name: "Панна котта экзотик чиа",
+      weight: "",
+      price: 550,
+    },
+    {
+      name: "Синьор Помидор",
+      weight: "",
+      price: 550,
+    },
+    {
+      name: "Чизкейк",
+      weight: "",
+      price: 480,
+    },
+    {
+      name: "Медовик шоколадный",
+      weight: "",
+      price: 470,
+    },
+    {
+      name: "Павлова",
+      weight: "",
+      price: 400,
+    },
 
-
+    {
+      name: "Наполеон",
+      weight: "",
+      price: 450,
+    },
+    {
+      name: "Сезонные фрукты и ягоды",
+      weight: "100 г",
+      price: 350,
+    },
+    {
+      name: "Сорбет на Ваш выбор",
+      weight: "50 г",
+      price: 250,
+    },
+    {
+      name: "Мороженое на Ваш выбор",
+      weight: "50",
+      price: 250,
+    },
+  ],
 };
 
 // Обновленная функция для отображения раздела меню с описанием
