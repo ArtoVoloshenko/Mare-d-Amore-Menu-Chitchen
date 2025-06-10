@@ -493,6 +493,7 @@ renderMenu("localMenu", menuData.localMenu);
 renderMenu("seafoodMenu", menuData.seafoodMenu);
 renderMenu("meatMenu", menuData.meatMenu);
 renderMenu("menuChildrens", menuData.menuChildrens);
+renderMenu("menuBread", menuData.menuBread);
 renderMenu("menuBreads", menuData.menuBreads);
 renderMenu("menuSouse", menuData.menuSouse);
 renderMenu("menuDesert", menuData.menuDesert);
