@@ -121,11 +121,7 @@ const menuData = {
   seafoodAndOysters: [
     { name: "Устрица Муроцу", weight: "1 шт", price: 900 },
     { name: "Устрица российская", weight: "1 шт", price: 580 },
-<<<<<<< HEAD
-     { name: "Устрицы заморские", weight: "1 шт", price: "750" }, 
-=======
-    { name: "Устрицы заморские", weight: "1 шт", price: "750" }, // уточняйте у
->>>>>>> 4ac76eaf2eda74acc1babe39770e15b4120239cb
+    { name: "Устрицы заморские", weight: "1 шт", price: "750" }, 
     { name: "Морской ёж", weight: "1 шт", price: 580 },
     { name: "Спизула", weight: "1 шт", price: 880 },
     { name: "Камчатский краб", weight: "100 г", price: 950 },
@@ -139,13 +135,8 @@ const menuData = {
       name: "Анадара - Моллюск с кровеносной системой ",
       weight: "1 шт",
       price: "880",
-<<<<<<< HEAD
     }
   
-=======
-    },
-    официанта,
->>>>>>> 4ac76eaf2eda74acc1babe39770e15b4120239cb
   ],
   shrimpAndOysters: [
     {
