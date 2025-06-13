@@ -120,7 +120,7 @@ const menuData = {
   ],
   seafoodAndOysters: [
     { name: "Устрица Муроцу", weight: "1 шт", price: 900 },
-    { name: "Устрица российская", weight: "1 шт", price: 580 },
+    { name: "Устрица российская", weight: "1 шт", price: 500 },
     { name: "Устрицы заморские", weight: "1 шт", price: "750" }, 
     { name: "Морской ёж", weight: "1 шт", price: 580 },
     { name: "Спизула", weight: "1 шт", price: 880 },
@@ -129,7 +129,7 @@ const menuData = {
     {
       name: "Морской гребешок стандарт/гигант",
       weight: "100/160",
-      price: "500 | 1200",  description: "наличие уточняйте у Вашего официанта"
+      price: "600 | 1200",  description: "наличие уточняйте у Вашего официанта"
     },
     {
       name: "Анадара - Моллюск с кровеносной системой ",
@@ -149,6 +149,16 @@ const menuData = {
       name: "Креветки тигровые в пряном соусе, подаются на сковороде",
       weight: "170 г",
       price: 850,
+    },
+       {
+      name: "Рапаны в сливочном соусе с грибами",
+      weight: "220",
+      price: 820,
+    },
+       {
+      name: "Осьминоги мини с водорослями чука",
+      weight: "210",
+      price: 1750,
     },
     { name: "Креветки темпура с крем чиз и нори", weight: "180 г", price: 850 },
     {
@@ -260,7 +270,7 @@ const menuData = {
       name: "из черного перца/чесночный",
       note: "",
     },
-    { price: 2100, weight: "100 г", name: "Ассорти морепродуктов" },
+    { price: 2100, weight: "790 г", name: "Ассорти морепродуктов", description: "тушки кальмара, осьминог с соусом терияки, креветки 8/12, мясо камчатского краба, тунец обжаренный в перечной панировке" },
     { price: 2850, weight: "1000 г", name: "Мидии в соусе Дор-блю" },
     { price: 2850, weight: "1000 г", name: "Мидии в соусе Бер блан" },
     { price: 2850, weight: "1000 г", name: "Мидии в соусе Том-Ям" },
@@ -301,6 +311,17 @@ const menuData = {
     { price: 470, weight: "100 г", name: "Дорада" },
     { price: 390, weight: "100 г", name: "Форель" },
   ],
+   grillMenu: [
+    { price: 380, weight:"100 г" , name: "Люля кебаб из курицы" },
+    { price: 620, weight:"100 г" , name: "Люля кебаб из барарнины" },
+    { price: 380, weight:"100 г" , name: "Шашлык из куриного бедра" },
+    { price: 450, weight:"100 г" , name: "Шашлык из свинины" }, 
+    { price: 1200, weight:"100 г" , name: "Каре баранины" },
+        { price: 960, weight: "500 г", name: "Цыпленок Тапака" },
+            { price: 220, weight:"100 г" , name: "Овощи на гриле ", description: "баклажан, болгарский перец, чили, томат, шампиньоны" },
+                { price: 150, weight:"100 г" , name: "Картофель с салом" },
+  ],
+
   menuChildrens: [
     { price: 470, weight: null, name: "Куриные наггетсы с сырным соусом" },
     { price: 370, weight: null, name: "Суп с фрикадельками" },
@@ -352,7 +373,7 @@ const menuData = {
   menuSouse: [
     {
       name: "Дор-блю",
-      weight: "190 г",
+      weight: "50 г",
       price: 190,
       description: "",
     },
@@ -370,19 +391,19 @@ const menuData = {
     },
     {
       name: "Барбекю",
-      weight: "190 г",
+      weight: "50 г",
       price: 150,
       description: "",
     },
     {
       name: "Сливочно-перечный",
-      weight: "190 г",
+      weight: "50 г",
       price: 190,
       description: "",
     },
     {
       name: "Демигляc",
-      weight: "190 г",
+      weight: "50 г",
       price: 100,
       description: "",
     },
@@ -503,6 +524,7 @@ renderMenu("dishesSortedByPriceDesc", menuData.dishesSortedByPriceDesc);
 renderMenu("localMenu", menuData.localMenu);
 renderMenu("seafoodMenu", menuData.seafoodMenu);
 renderMenu("meatMenu", menuData.meatMenu);
+renderMenu("grillMenu", menuData.grillMenu);
 renderMenu("menuChildrens", menuData.menuChildrens);
 renderMenu("menuBread", menuData.menuBread);
 renderMenu("menuBreads", menuData.menuBreads);
